@@ -11,7 +11,7 @@ schema = StructType()\
     .add("TicketNumber",FloatType(),True)\
     .add("Article",StringType(),True)\
     .add("Quantity",FloatType(),True)\
-    .add("UnitPrice",StringType(),True)\
+    .add("UnitPrice",FloatType(),True)\
     .add("Type",StringType(),True)\
 
 df_sales= spark.read\
