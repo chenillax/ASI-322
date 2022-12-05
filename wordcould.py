@@ -10,7 +10,7 @@ from schema import df_sales
 
 # Compte les articles
 article = df_sales.groupBy("Article").sum("Quantity").sort(F.col("sum(Quantity)").desc())
-# article.write.csv('mycsv.csv')
+#article.write.csv('mmycsv.csv')
 size=800
 x, y = np.ogrid[:size, :size]
 

@@ -12,6 +12,7 @@ schema = StructType()\
     .add("Article",StringType(),True)\
     .add("Quantity",FloatType(),True)\
     .add("UnitPrice",StringType(),True)\
+    .add("Type",StringType(),True)\
 
 df_sales= spark.read\
     .option("header",True)\
