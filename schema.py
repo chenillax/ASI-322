@@ -6,7 +6,7 @@ data = "Bakery_sales.csv"
 
 schema = StructType()\
     .add("",IntegerType(),True)\
-    .add("Date", DateType(), True)\
+    .add("Date", StringType(), True)\
     .add("Time",StringType(),True)\
     .add("TicketNumber",FloatType(),True)\
     .add("Article",StringType(),True)\
