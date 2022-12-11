@@ -18,5 +18,5 @@ sales_subtotal_by_type = df_sales.withColumn("subtotal", multiply("Quantity", "U
     "subtotal").sort(F.col("sum(subtotal)").desc())  # .toPandas().plot.bar(x="Type", y="sum(subtotal)")
 sales_quant_value = sales_quantity_by_type.join(sales_subtotal_by_type, sales_quantity_by_type.Type == sales_subtotal_by_type.Type, "inner").select(
     [sales_quantity_by_type.Type, "sum(Quantity)", "sum(subtotal)"]).toPandas()
-sales_quant_value.plot.barh(x='Type',rot=0, title="Ventes: quantités par rapport au chiffre d'affaire par type")
+sales_quant_value.plot.barh(x='Type',rot=0, title="Comparaison CA/quantité")
 plt.show()
